@@ -333,7 +333,28 @@ a { color: inherit; }
 .project-stack-tag { font-size: 0.7rem; color: var(--slate-light); }
 .project-card h3 { font-size: 1.08rem; margin: 0 0 10px; color: var(--navy); }
 .project-card p { color: var(--slate); font-size: 0.92rem; margin: 0 0 14px; }
-.project-tools { font-size: 0.75rem; color: var(--slate-light); margin-top: auto; margin-bottom: 0; line-height: 1.6; }
+.project-tools { font-size: 0.75rem; color: var(--slate-light); margin-bottom: 0; line-height: 1.6; }
+.project-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--teal);
+  text-decoration: none;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+.project-link:hover { color: var(--teal-dark); }
+.projects-grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+.meta-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 48px;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
 
 /* certifications */
 .cert-row { display: flex; align-items: center; gap: 22px; margin-top: 24px; }
@@ -377,8 +398,9 @@ a { color: inherit; }
   .hero-inner { grid-template-columns: 1fr; }
   .about-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr; }
-  .projects-grid { grid-template-columns: 1fr; }
+  .projects-grid, .projects-grid-2 { grid-template-columns: 1fr; }
   .log-entry { grid-template-columns: 1fr; gap: 12px; }
+  .meta-row { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
