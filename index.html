@@ -3,317 +3,233 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Payal Daki — DevOps Engineer</title>
-<meta name="description" content="Payal Daki — AWS Certified DevOps Engineer. CI/CD pipelines, cloud infrastructure, and production deployments.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<title>Payal Daki - DevOps Engineer</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI',sans-serif;background:#0f172a;color:#e2e8f0;line-height:1.6;}
+a{color:#60a5fa;text-decoration:none;}
+nav{position:fixed;top:0;width:100%;background:#0f172a;border-bottom:1px solid #1e293b;z-index:100;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;}
+nav .logo{font-weight:700;color:#60a5fa;font-size:1.2rem;}
+nav ul{list-style:none;display:flex;gap:2rem;}
+nav ul a{color:#94a3b8;font-size:0.9rem;transition:color 0.2s;}
+nav ul a:hover{color:#60a5fa;}
+section{padding:5rem 2rem;max-width:900px;margin:0 auto;}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:5rem;}
+.badge{display:inline-block;background:#1e3a5f;color:#60a5fa;padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;margin-bottom:1rem;border:1px solid #2563eb;}
+.hero h1{font-size:3rem;font-weight:700;line-height:1.2;margin-bottom:0.5rem;}
+.hero h1 span{color:#60a5fa;}
+.hero .title{font-size:1.3rem;color:#94a3b8;margin-bottom:1rem;}
+.hero p{color:#94a3b8;max-width:600px;margin-bottom:2rem;font-size:1rem;}
+.btn-group{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn{padding:0.7rem 1.5rem;border-radius:8px;font-size:0.9rem;font-weight:500;transition:all 0.2s;cursor:pointer;border:none;}
+.btn-primary{background:#2563eb;color:#fff;}
+.btn-primary:hover{background:#1d4ed8;}
+.btn-outline{background:transparent;color:#60a5fa;border:1px solid #2563eb;}
+.btn-outline:hover{background:#1e3a5f;}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:3rem;}
+.stat{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:1.2rem;text-align:center;}
+.stat .num{font-size:1.8rem;font-weight:700;color:#60a5fa;}
+.stat .label{font-size:0.8rem;color:#94a3b8;margin-top:0.3rem;}
+.section-title{font-size:1.8rem;font-weight:700;margin-bottom:0.5rem;}
+.section-title span{color:#60a5fa;}
+.section-sub{color:#94a3b8;margin-bottom:2.5rem;font-size:0.95rem;}
+.divider{width:50px;height:3px;background:#2563eb;border-radius:2px;margin:0.5rem 0 1.5rem;}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;}
+.skill-card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:1.2rem;}
+.skill-card h4{color:#60a5fa;font-size:0.85rem;margin-bottom:0.8rem;text-transform:uppercase;letter-spacing:0.05em;}
+.skill-card .tags{display:flex;flex-wrap:wrap;gap:0.4rem;}
+.tag{background:#0f172a;color:#94a3b8;padding:0.2rem 0.6rem;border-radius:6px;font-size:0.75rem;border:1px solid #334155;}
+.timeline{position:relative;padding-left:1.5rem;}
+.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:#1e293b;}
+.exp-card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;position:relative;}
+.exp-card::before{content:'';position:absolute;left:-1.9rem;top:1.5rem;width:10px;height:10px;background:#2563eb;border-radius:50%;border:2px solid #0f172a;}
+.exp-card .company{color:#60a5fa;font-size:0.85rem;margin-bottom:0.3rem;}
+.exp-card h3{font-size:1.1rem;margin-bottom:0.3rem;}
+.exp-card .period{color:#64748b;font-size:0.8rem;margin-bottom:1rem;}
+.exp-card ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem;}
+.exp-card ul li{color:#94a3b8;font-size:0.85rem;padding-left:1rem;position:relative;}
+.exp-card ul li::before{content:'▸';position:absolute;left:0;color:#2563eb;}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;}
+.project-card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:1.5rem;transition:border-color 0.2s;}
+.project-card:hover{border-color:#2563eb;}
+.project-icon{width:40px;height:40px;background:#1e3a5f;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.2rem;}
+.project-card h3{font-size:1rem;margin-bottom:0.5rem;}
+.project-card p{color:#94a3b8;font-size:0.85rem;margin-bottom:1rem;}
+.project-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1rem;}
+.project-link{color:#60a5fa;font-size:0.8rem;}
+.certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;}
+.cert-card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:1.2rem;display:flex;align-items:center;gap:1rem;}
+.cert-icon{width:40px;height:40px;background:#1e3a5f;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;}
+.cert-card h4{font-size:0.9rem;margin-bottom:0.2rem;}
+.cert-card p{color:#64748b;font-size:0.75rem;}
+.contact-card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:2rem;text-align:center;}
+.contact-card p{color:#94a3b8;margin-bottom:1.5rem;}
+.contact-links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;}
+.contact-link{background:#0f172a;border:1px solid #334155;border-radius:8px;padding:0.7rem 1.2rem;color:#94a3b8;font-size:0.85rem;display:flex;align-items:center;gap:0.5rem;transition:all 0.2s;}
+.contact-link:hover{border-color:#2563eb;color:#60a5fa;}
+footer{text-align:center;padding:2rem;color:#475569;font-size:0.8rem;border-top:1px solid #1e293b;}
+</style>
 </head>
 <body>
+<nav>
+  <div class="logo">PD</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-<div class="status-strip" aria-hidden="true">
-  <div class="status-strip-inner">
-    <span class="dot"></span> 9+ APPLICATIONS IN PRODUCTION &nbsp;&mdash;&nbsp; 50+ CI/CD PIPELINES MAINTAINED
+<section class="hero" id="about">
+  <div class="badge">🟢 Open to Opportunities</div>
+  <h1>Hi, I'm <span>Payal Daki</span></h1>
+  <div class="title">DevOps Engineer & AWS Certified Solutions Architect</div>
+  <p>2+ years of hands-on experience managing CI/CD pipelines, cloud infrastructure, and production deployments for 9+ applications on AWS. Passionate about automation, infrastructure security, and building reliable systems.</p>
+  <div class="btn-group">
+    <a href="mailto:payaldaki6@gmail.com" class="btn btn-primary">Get In Touch</a>
+    <a href="https://github.com/payal-daki" class="btn btn-outline" target="_blank">GitHub Profile</a>
+    <a href="https://linkedin.com/in/payal-daki" class="btn btn-outline" target="_blank">LinkedIn</a>
   </div>
-</div>
-
-<header class="nav">
-  <div class="nav-inner">
-    <a href="#top" class="brand">PD<span class="brand-dot">.</span></a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="btn btn-ghost nav-cta" href="#contact">Get in touch</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+  <div class="stats">
+    <div class="stat"><div class="num">2+</div><div class="label">Years Experience</div></div>
+    <div class="stat"><div class="num">9+</div><div class="label">Apps Managed</div></div>
+    <div class="stat"><div class="num">50+</div><div class="label">Pipelines Built</div></div>
   </div>
-  <nav class="nav-mobile" id="navMobile" aria-label="Mobile">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+</section>
 
-<main id="top">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-left">
-        <p class="eyebrow">DEVOPS ENGINEER</p>
-        <h1>Payal Daki</h1>
-        <p class="hero-lede">AWS Certified Solutions Architect &ndash; Associate and DevOps Engineer with 2 years of hands-on experience managing CI/CD pipelines, AWS cloud infrastructure, and production deployments for 9+ applications.</p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View projects</a>
-          <a href="#contact" class="btn btn-outline">Contact me</a>
-        </div>
-      </div>
-      <aside class="hero-panel" aria-label="Career summary">
-        <div class="panel-head">
-          <span class="dot dot-sm"></span>
-          <span class="panel-label">career_summary.log</span>
-        </div>
-        <ul class="panel-list">
-          <li><span class="k">experience</span><span class="v">2 years</span></li>
-          <li><span class="k">applications</span><span class="v">9+ in production</span></li>
-          <li><span class="k">pipelines</span><span class="v">50+ maintained</span></li>
-          <li><span class="k">certification</span><span class="v">AWS SAA&#8209;C03</span></li>
-          <li><span class="k">since</span><span class="v">Jul 2024</span></li>
-        </ul>
-      </aside>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="section" id="about">
-    <div class="section-inner">
-      <p class="eyebrow">01 &mdash; PROFILE</p>
-      <div class="about-grid">
-        <h2>Profile</h2>
-        <div class="about-body">
-          <p>AWS Certified Solutions Architect &ndash; Associate and DevOps Engineer with 2 years of hands-on experience managing CI/CD pipelines, AWS cloud infrastructure, and production deployments for 9+ applications.</p>
-          <p>Skilled in Jenkins, GitHub Actions, Docker, Terraform, Prometheus, Grafana, and database migrations. Experienced in zero-downtime deployments, infrastructure security hardening, and building scalable, highly available systems on AWS.</p>
-        </div>
+<section id="skills">
+  <div class="section-title">Technical <span>Skills</span></div>
+  <div class="divider"></div>
+  <div class="section-sub">Tools and technologies I work with daily</div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h4>CI/CD</h4>
+      <div class="tags">
+        <span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">CodePipeline</span><span class="tag">CodeBuild</span><span class="tag">CodeDeploy</span><span class="tag">SonarQube</span>
       </div>
     </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="section section-alt" id="skills">
-    <div class="section-inner">
-      <p class="eyebrow">02 &mdash; SKILLS</p>
-      <h2>What I work with</h2>
-      <div class="skills-grid">
-
-        <div class="skill-group">
-          <p class="skill-cat">DEVOPS &amp; CI/CD</p>
-          <div class="chips">
-            <span>Jenkins</span><span>GitHub Actions</span><span>AWS CodePipeline</span>
-            <span>AWS CodeBuild</span><span>AWS CodeDeploy</span><span>SonarQube</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <p class="skill-cat">CLOUD (AWS)</p>
-          <div class="chips">
-            <span>EC2</span><span>S3</span><span>RDS</span><span>Elastic Beanstalk</span>
-            <span>ELB</span><span>Lightsail</span><span>IAM</span><span>SSM Parameter Store</span>
-            <span>Route53</span><span>SES</span><span>CloudWatch</span><span>ECR</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <p class="skill-cat">IaC &amp; CONTAINERS</p>
-          <div class="chips">
-            <span>Terraform (Modules, Remote State, CI/CD)</span><span>Docker</span><span>Nginx</span><span>PM2</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <p class="skill-cat">MONITORING</p>
-          <div class="chips">
-            <span>Prometheus</span><span>Grafana</span><span>AWS CloudWatch</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <p class="skill-cat">DATABASE</p>
-          <div class="chips">
-            <span>MySQL</span><span>PostgreSQL</span><span>pgloader</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <p class="skill-cat">SCRIPTING &amp; OS</p>
-          <div class="chips">
-            <span>Linux (Ubuntu)</span><span>Bash/Shell</span><span>Python</span><span>Windows</span><span>macOS</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <p class="skill-cat">DEPLOYMENT</p>
-          <div class="chips">
-            <span>Microservices</span><span>Zero-downtime</span><span>Blue-Green</span>
-            <span>Rolling Updates</span><span>Flutter (Play Store)</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <p class="skill-cat">TOOLS</p>
-          <div class="chips">
-            <span>Git</span><span>GitHub</span><span>Cloudflare</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <p class="skill-cat">OTHER</p>
-          <div class="chips">
-            <span>Infrastructure Security Hardening</span><span>Cost Optimization</span><span>Documentation</span>
-          </div>
-        </div>
-
+    <div class="skill-card">
+      <h4>Cloud (AWS)</h4>
+      <div class="tags">
+        <span class="tag">EC2</span><span class="tag">S3</span><span class="tag">RDS</span><span class="tag">EKS</span><span class="tag">ECR</span><span class="tag">Route53</span><span class="tag">SES</span><span class="tag">CloudWatch</span><span class="tag">Lightsail</span>
       </div>
     </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section class="section" id="experience">
-    <div class="section-inner">
-      <p class="eyebrow">03 &mdash; EXPERIENCE</p>
-      <h2>Deployment history</h2>
-
-      <div class="deploylog">
-
-        <div class="log-entry">
-          <div class="log-time">
-            <span class="mono">07/2024 &rarr; present</span>
-            <span class="badge badge-live">RUNNING</span>
-          </div>
-          <div class="log-body">
-            <h3>DevOps Engineer &mdash; Mplify Tech Services Pvt. Ltd.</h3>
-            <ul>
-              <li>Managed end-to-end DevOps operations for 9+ applications including CI/CD pipelines, cloud infrastructure, and deployment automation across Staging and Production.</li>
-              <li>Designed and maintained 50+ Jenkins, GitHub Actions, and AWS CodePipeline CI/CD pipelines with auto-trigger logic to deploy only changed microservices.</li>
-              <li>Implemented PR label automation using Jenkins pipelines to track staging and production deployments across all repositories.</li>
-              <li>Deployed and managed applications on AWS (EC2, RDS, S3, Elastic Beanstalk, ELB, Lightsail, Route53, SES, ECR) with focus on scalability and reliability.</li>
-              <li>Performed MySQL to PostgreSQL database migrations using pgloader, ensuring data integrity and minimal downtime.</li>
-              <li>Managed microservices deployments for apps built with Next.js, React, Spring Boot, Python, and Laravel.</li>
-              <li>Set up Prometheus + Grafana dashboards to monitor all EC2 instances across staging and production infrastructure.</li>
-              <li>Integrated SonarQube static code analysis into Jenkins pipelines.</li>
-              <li>Implemented infrastructure security hardening &mdash; HSTS, Basic Auth, and SSH tunneling.</li>
-              <li>Automated daily database backups to S3 using cron scripts across all product infrastructures.</li>
-              <li>Handled mobile app CI/CD pipelines for Flutter, including build, signing, and release on Google Play Store via macOS.</li>
-              <li>Configured Cloudflare DNS, SSL, caching, and firewall rules to enhance application security and performance.</li>
-              <li>Deployed Ollama + LLaMA AI server on EC2 for production AI module usage.</li>
-              <li>Automated tasks using shell/batch scripts, resolved deployment incidents, and maintained documentation for all infrastructure processes.</li>
-            </ul>
-          </div>
-        </div>
-
+    <div class="skill-card">
+      <h4>IaC & Containers</h4>
+      <div class="tags">
+        <span class="tag">Terraform</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Helm</span><span class="tag">Nginx</span>
       </div>
     </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="section section-alt" id="projects">
-    <div class="section-inner">
-      <p class="eyebrow">04 &mdash; PROJECTS</p>
-      <h2>Things I've built</h2>
-
-      <div class="projects-grid projects-grid-2">
-
-        <article class="project-card">
-          <div class="project-top">
-            <span class="badge badge-live">DEPLOYED</span>
-            <span class="mono project-stack-tag">Terraform &middot; AWS</span>
-          </div>
-          <h3>Terraform AWS Infrastructure</h3>
-          <p>Built complete AWS infrastructure using Terraform covering EC2, VPC, RDS, and S3, with remote state via S3 backend and state locking, reusable modules, and a GitHub Actions CI/CD pipeline for automated infrastructure deployment.</p>
-          <p class="project-tools mono">Terraform &middot; AWS &middot; GitHub Actions</p>
-          <a class="project-link" href="https://github.com/payal-daki/Terraform-learning" target="_blank" rel="noopener">github.com/payal-daki/Terraform-learning &nearr;</a>
-        </article>
-
-        <article class="project-card">
-          <div class="project-top">
-            <span class="badge badge-live">DEPLOYED</span>
-            <span class="mono project-stack-tag">Kubernetes &middot; k3s</span>
-          </div>
-          <h3>Kubernetes Application Deployment Project</h3>
-          <p>Built an end-to-end Kubernetes application deployment project using k3s. Implemented Namespaces, Deployments, Services, ConfigMaps, Secrets, NGINX Ingress, Helm Charts, Persistent Volumes (PV/PVC), and Horizontal Pod Autoscaler (HPA) to understand how core Kubernetes resources work together.</p>
-          <p class="project-tools mono">Kubernetes &middot; k3s &middot; Helm &middot; NGINX Ingress</p>
-          <a class="project-link" href="https://github.com/payal-daki/k8s-learning" target="_blank" rel="noopener">github.com/payal-daki/k8s-learning &nearr;</a>
-        </article>
-
+    <div class="skill-card">
+      <h4>Monitoring</h4>
+      <div class="tags">
+        <span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">CloudWatch</span>
       </div>
     </div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section class="section" id="certifications">
-    <div class="section-inner">
-      <p class="eyebrow">05 &mdash; CERTIFICATION</p>
-      <div class="cert-row">
-        <div class="cert-badge" aria-hidden="true">AWS</div>
-        <div>
-          <h3>AWS Certified Solutions Architect &mdash; Associate</h3>
-          <p class="mono cert-code">2024</p>
-        </div>
+    <div class="skill-card">
+      <h4>Database</h4>
+      <div class="tags">
+        <span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">pgloader</span>
       </div>
     </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section class="section section-alt" id="education">
-    <div class="section-inner">
-      <p class="eyebrow">06 &mdash; EDUCATION</p>
-      <h2>Education</h2>
-      <div class="deploylog">
-        <div class="log-entry">
-          <div class="log-time">
-            <span class="mono">2021 &rarr; 2024</span>
-          </div>
-          <div class="log-body">
-            <h3>B.Tech in Computer Science &amp; Engineering (Cyber Security)</h3>
-            <p class="log-loc">Silver Oak University &middot; Ahmedabad, India</p>
-          </div>
-        </div>
-        <div class="log-entry">
-          <div class="log-time">
-            <span class="mono">2018 &rarr; 2021</span>
-          </div>
-          <div class="log-body">
-            <h3>Diploma in Computer Engineering</h3>
-            <p class="log-loc">Gujarat Technological University &middot; Junagadh, India</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="meta-row">
-        <div>
-          <p class="skill-cat">LANGUAGES</p>
-          <div class="chips"><span>English</span><span>Gujarati</span><span>Hindi</span></div>
-        </div>
-        <div>
-          <p class="skill-cat">TECHNOLOGICAL INTERESTS</p>
-          <div class="chips"><span>DevSecOps</span><span>Kubernetes &amp; Amazon EKS</span><span>AIOps</span></div>
-        </div>
+    <div class="skill-card">
+      <h4>Scripting & OS</h4>
+      <div class="tags">
+        <span class="tag">Linux</span><span class="tag">Bash</span><span class="tag">Python</span><span class="tag">Windows</span><span class="tag">macOS</span>
       </div>
     </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section section-dark" id="contact">
-    <div class="section-inner">
-      <p class="eyebrow eyebrow-light">07 &mdash; CONTACT</p>
-      <h2 class="contact-heading">Let's build something reliable.</h2>
-      <p class="contact-lede mono">payaldaki6@gmail.com &middot; +91 9727992779</p>
-      <div class="contact-actions">
-        <a class="btn btn-primary" href="mailto:payaldaki6@gmail.com">Email me</a>
-        <a class="btn btn-outline btn-outline-dark" href="https://linkedin.com/in/payal-daki" target="_blank" rel="noopener">LinkedIn &nearr;</a>
-        <a class="btn btn-outline btn-outline-dark" href="https://github.com/payal-daki" target="_blank" rel="noopener">GitHub &nearr;</a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="section-inner footer-inner">
-    <span class="mono">&copy; <span id="year"></span> Payal Daki</span>
-    <span class="mono footer-status"><span class="dot dot-sm"></span> Available for remote roles</span>
   </div>
+</section>
+
+<section id="experience">
+  <div class="section-title">Work <span>Experience</span></div>
+  <div class="divider"></div>
+  <div class="section-sub">My professional journey</div>
+  <div class="timeline">
+    <div class="exp-card">
+      <div class="company">Mplify Tech Services Pvt. Ltd — Gandhinagar, India</div>
+      <h3>DevOps Engineer-II</h3>
+      <div class="period">July 2024 – Present</div>
+      <ul>
+        <li>Managed end-to-end DevOps for 9+ applications including JoyRejoy, Bodhak, Beesclan, Mplify, Jumpick, VeerSahara, Cabrol, Vardhman, ReleaseGuardian</li>
+        <li>Designed and maintained 50+ Jenkins, GitHub Actions, and AWS CodePipeline CI/CD pipelines</li>
+        <li>Built auto-trigger logic to deploy only changed microservices</li>
+        <li>Set up Prometheus + Grafana dashboards for all EC2 instances</li>
+        <li>Performed MySQL to PostgreSQL migrations using pgloader</li>
+        <li>Implemented HSTS, Basic Auth, SSH tunneling for security hardening</li>
+        <li>Configured Cloudflare DNS, SSL, caching, and firewall rules</li>
+        <li>Deployed Ollama + LLaMA AI server on EC2 for AI usage</li>
+        <li>Built Flutter mobile app CI/CD pipelines on macOS Jenkins for Android and iOS deployment</li>
+        <li>Managed end-to-end mobile app deployment — build, signing, and release on Google Play Store and Apple App Store</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="section-title">Featured <span>Projects</span></div>
+  <div class="divider"></div>
+  <div class="section-sub">Personal learning projects on GitHub</div>
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-icon">🏗️</div>
+      <h3>Terraform AWS Infrastructure</h3>
+      <p>Complete AWS infrastructure using Terraform covering EC2, VPC, RDS, S3, remote state with S3 backend, reusable modules, and GitHub Actions CI/CD.</p>
+      <div class="project-tags">
+        <span class="tag">Terraform</span><span class="tag">AWS</span><span class="tag">GitHub Actions</span><span class="tag">S3</span><span class="tag">RDS</span>
+      </div>
+      <a href="https://github.com/payal-daki/Terraform-learning" target="_blank" class="project-link">View on GitHub →</a>
+    </div>
+    <div class="project-card">
+      <div class="project-icon">⎈</div>
+      <h3>Kubernetes Application Deployment</h3>
+      <p>End-to-end K8s project using k3s with Namespaces, Deployments, Services, ConfigMaps, Secrets, Ingress, Helm, PV/PVC, HPA, and EKS on AWS.</p>
+      <div class="project-tags">
+        <span class="tag">Kubernetes</span><span class="tag">Helm</span><span class="tag">EKS</span><span class="tag">Docker</span><span class="tag">ECR</span>
+      </div>
+      <a href="https://github.com/payal-daki/k8s-learning" target="_blank" class="project-link">View on GitHub →</a>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="section-title">Certifi<span>cations</span></div>
+  <div class="divider"></div>
+  <div class="section-sub">Professional credentials</div>
+  <div class="certs-grid">
+    <div class="cert-card">
+      <div class="cert-icon">☁️</div>
+      <div><h4>AWS Solutions Architect</h4><p>Associate — 2024</p></div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🐳</div>
+      <div><h4>Docker Foundations</h4><p>Professional Certificate — 2024</p></div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🔧</div>
+      <div><h4>Jenkins Essential Training</h4><p>LinkedIn Learning — 2024</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-title">Get In <span>Touch</span></div>
+  <div class="divider"></div>
+  <div class="contact-card">
+    <h3 style="margin-bottom:0.5rem;">Open to DevOps / Cloud Engineer / SRE Opportunities</h3>
+    <p>Feel free to reach out for opportunities or just to connect!</p>
+    <div class="contact-links">
+      <a href="mailto:payaldaki6@gmail.com" class="contact-link">📧 payaldaki6@gmail.com</a>
+      <a href="https://linkedin.com/in/payal-daki" target="_blank" class="contact-link">💼 LinkedIn</a>
+      <a href="https://github.com/payal-daki" target="_blank" class="contact-link">🐙 GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Built with ❤️ by Payal Daki • DevOps Engineer</p>
 </footer>
-
-<script src="script.js"></script>
 </body>
 </html>
